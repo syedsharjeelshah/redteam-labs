@@ -10,23 +10,23 @@ _**Week 1 is all about becoming a detective, finding weaknesses by learning abou
 
    **🔧 Commands:**
    
-whoami 
+1. whoami 
 
 **# Shows your current username**
 
-id
+2. id
 
 **# Shows UID, GID, and group info**
 
-hostname
+3. hostname
 
 **# Name of the machine**
 
-uname -a
+4. uname -a
 
 **# Kernel version and architecture**
 
-cat /etc/os-release
+5. cat /etc/os-release
 
 **# OS distribution and version info**
 
@@ -43,15 +43,15 @@ ________________________________________________________________________________
 
   **🔧 Commands:**  
   
-cat /etc/passwd          
+1. cat /etc/passwd          
 
 **# Lists all users**
 
-cut -d: -f1 /etc/passwd 
+2. cut -d: -f1 /etc/passwd 
 
 **# Just show usernames**
 
-getent passwd           
+3. getent passwd           
 
 **# Another way to list users (uses system libraries)**
 
@@ -67,11 +67,11 @@ ________________________________________________________________________________
 
    **🔧 Commands:**
    
-groups     
+1. groups     
 
 **# Shows what groups you're part of**
 
-sudo -l    
+2. sudo -l    
 
 **# Lists c ommands you can run with sudo (if any)**
 
@@ -86,7 +86,7 @@ ________________________________________________________________________________
 
   **🔧 Commands:**
   
-find / -perm -4000 -type f 2>/dev/null
+1. find / -perm -4000 -type f 2>/dev/null
 
 **🧠 Why?**
 
@@ -99,11 +99,11 @@ ________________________________________________________________________________
 
  **🔧 Commands:**
  
-find / -writable -type d 2>/dev/null   
+1. find / -writable -type d 2>/dev/null   
 
 **# Writable directories**
 
-find / -type f -name "*.sh"        
+2. find / -type f -name "*.sh"        
 
 **# Look for script files**
 
@@ -117,11 +117,11 @@ ________________________________________________________________________________
 
  **🔧 Commands:**
  
-cat /etc/crontab
+1. cat /etc/crontab
 
-ls -la /etc/cron*
+2. ls -la /etc/cron*
 
-ps aux | grep cron
+3. ps aux | grep cron
 
 **🧠 Why?**
 
@@ -135,9 +135,9 @@ ________________________________________________________________________________
  **🔧 Commands:**
  
 - wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
-- 
+
 - chmod +x linpeas.sh
-- 
+
 - ./linpeas.sh
 
  **For process monitoring:**
@@ -150,5 +150,3 @@ ________________________________________________________________________________
 
     Tools like linPEAS automatically list SUID, crons, passwords, services, etc.
 ___________________________________________________________________________________________
-
-
