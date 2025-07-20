@@ -1,6 +1,6 @@
 _**Week 1 is all about becoming a detective, finding weaknesses by learning about the system, the users, and the power you may already have.**_
 
-                                    # WEEK 1:
+                                                        # WEEK 1:
 
 **📚 Goal:** **Learn how to collect basic system and user info after gaining initial access to a Linux machine (post-exploitation step 1).**
 
@@ -9,11 +9,28 @@ _**Week 1 is all about becoming a detective, finding weaknesses by learning abou
    _Understand what user you are, what machine you're on, and its OS._
 
    **🔧 Commands:**
-whoami                  **# Shows your current username**
-id                      **# Shows UID, GID, and group info**
-hostname                **# Name of the machine**
-uname -a                **# Kernel version and architecture**
-cat /etc/os-release     **# OS distribution and version info**
+   
+whoami 
+
+**# Shows your current username**
+
+id
+
+**# Shows UID, GID, and group info**
+
+hostname
+
+**# Name of the machine**
+
+uname -a
+
+**# Kernel version and architecture**
+
+cat /etc/os-release
+
+**# OS distribution and version info**
+
+
 
 **🧠 Why?**
 
@@ -25,9 +42,19 @@ ________________________________________________________________________________
   _Now discover who else exists on the system. Admins, other users, etc._
 
   **🔧 Commands:**  
-cat /etc/passwd          **# Lists all users**
-cut -d: -f1 /etc/passwd  **# Just show usernames**
-getent passwd            **# Another way to list users (uses system libraries)**
+  
+cat /etc/passwd          
+
+**# Lists all users**
+
+cut -d: -f1 /etc/passwd 
+
+**# Just show usernames**
+
+getent passwd           
+
+**# Another way to list users (uses system libraries)**
+
 
 **🧠 Why?**
 
@@ -39,8 +66,14 @@ ________________________________________________________________________________
   _Check your privileges — can you become root using sudo?_
 
    **🔧 Commands:**
-groups      **# Shows what groups you're part of**
-sudo -l     **# Lists c ommands you can run with sudo (if any)**
+   
+groups     
+
+**# Shows what groups you're part of**
+
+sudo -l    
+
+**# Lists c ommands you can run with sudo (if any)**
 
 **🧠 Why?**
 
@@ -52,6 +85,7 @@ ________________________________________________________________________________
   _These are files that run as root even if you are a normal user._
 
   **🔧 Commands:**
+  
 find / -perm -4000 -type f 2>/dev/null
 
 **🧠 Why?**
@@ -64,8 +98,14 @@ ________________________________________________________________________________
   _You might be able to modify scripts or binaries if they’re writable._
 
  **🔧 Commands:**
-find / -writable -type d 2>/dev/null    **# Writable directories**
-find / -type f -name "*.sh"             **# Look for script files**
+ 
+find / -writable -type d 2>/dev/null   
+
+**# Writable directories**
+
+find / -type f -name "*.sh"        
+
+**# Look for script files**
 
 **🧠 Why?**
 
@@ -76,8 +116,11 @@ ________________________________________________________________________________
   _Cron jobs are scheduled tasks — sometimes they run scripts every minute/hour._
 
  **🔧 Commands:**
+ 
 cat /etc/crontab
+
 ls -la /etc/cron*
+
 ps aux | grep cron
 
 **🧠 Why?**
@@ -90,12 +133,18 @@ ________________________________________________________________________________
    _Use automated scripts to save time and detect common misconfiguration._
 
  **🔧 Commands:**
+ 
 - wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
+- 
 - chmod +x linpeas.sh
+- 
 - ./linpeas.sh
 
  **For process monitoring:**
-./pspy64       **# You’ll see scheduled cron jobs in real-time**
+ 
+./pspy64      
+
+**# You’ll see scheduled cron jobs in real-time**
 
 **🧠 Why?**
 
