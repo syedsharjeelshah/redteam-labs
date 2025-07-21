@@ -28,7 +28,9 @@ ________________________________________________________________________________
 
 
 ![Week 1 step 2 (1)](https://github.com/user-attachments/assets/a12b5330-02bf-4916-bcb9-9a882221c5c8)
+
 ![Week 1 step 2 (2)](https://github.com/user-attachments/assets/3d8907be-9c07-43b9-824f-17a634906a42)
+
 ![Week 1 step 2 (3)](https://github.com/user-attachments/assets/b2de60f3-331b-4d5f-8978-04f48774edc4)
 
 ## Output of `Step 2 commands`.
@@ -58,17 +60,57 @@ ________________________________________________________________________________
 
 # Step 5: Writable Folders & Files
 
+1. find / -writable -type d 2>/dev/null   
+
+2. find / -name "*.sh" 2>/dev/null        
 
 
+![step 5 (1)](https://github.com/user-attachments/assets/e9070373-0a19-4b4b-8170-d4a253f163ca)
+
+![step 5 (2)](https://github.com/user-attachments/assets/8af79110-4ca4-4585-a344-410094917d39)
+
+## Output of `Step 5 commands`.
+__________________________________________________________________________________________________________
+
+# Step 6: Check for Cron Jobs
+
+1. cat /etc/crontab
+
+2. ls -la /etc/cron*
+
+3. ps aux | grep cron
 
 
+![step 6 (1)](https://github.com/user-attachments/assets/8c530bf1-9008-440e-a297-d2d14c00cbb3)
 
+![step 6 (2)](https://github.com/user-attachments/assets/7035b0b0-2c29-43aa-b932-6adde0549713)
 
+![step 6 (3)](https://github.com/user-attachments/assets/27717af3-01fa-470a-9a19-15e8c689ad62)
 
+## Output of `Step 6 commands`.
 
+__________________________________________________________________________________________________________
 
+# Step 7: Use linPEAS for Automation
 
+- wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 
+- chmod +x linpeas.sh
+
+- ./linpeas.sh
+
+![step 7 (1)](https://github.com/user-attachments/assets/ddaf4f4c-17ee-4782-b653-e0d7b6d23261)
+
+![step 7 (2)](https://github.com/user-attachments/assets/80e191b9-3700-4996-9914-0faa8a8fa9b7)
+
+![step 7 (3)](https://github.com/user-attachments/assets/934099f0-1fd6-4ce2-bc6b-c52c8408598d)
+
+![step 7 (4)](https://github.com/user-attachments/assets/f2612cb4-8639-44d8-bfdc-a3b9d72489e0)
+
+![step 7 (5)](https://github.com/user-attachments/assets/0a6cff09-ee23-4afa-9412-04a9ce157d54)
+
+## Output of `Step 6 commands`.
+__________________________________________________________________________________________________________
 
 
 
