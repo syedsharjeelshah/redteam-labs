@@ -1,4 +1,4 @@
-# 🧪 Week 2 – Nmap & Network Scanning (Complete Beginner-Friendly Breakdown)
+#  Week 2 – Nmap & Network Scanning (Complete Beginner-Friendly Breakdown)
 
 ---
 
@@ -179,7 +179,7 @@ nikto -h http://192.168.1.10
 
 ---
 
-## 🧩 Bonus: Netcat Port Scanning (Manual)
+## 🧩 Netcat Port Scanning (Manual)
 
 ```bash
 nc -v -n -z 192.168.1.10 1-1000
@@ -189,7 +189,7 @@ nc -v -n -z 192.168.1.10 1-1000
 
 ---
 
-## ✅ Summary Table – Week 2
+## ✅ Summary Week 2
 
 | Task                    | Command              | Description            |
 | ----------------------- | -------------------- | ---------------------- |
@@ -204,40 +204,3 @@ nc -v -n -z 192.168.1.10 1-1000
 | Netcat scan             | `nc -v -z`           | Manual port scan       |
 
 ---
-
-## 📁 Your GitHub Folder Structure Suggestion:
-
-```
-redteam-labs/
-├── Week02_Nmap/
-│   ├── README.md
-│   ├── scans/
-│   │   ├── full-scan.txt
-│   │   ├── vuln-scan.txt
-│   └── screenshots/
-│       ├── open-ports.png
-│       ├── web-recon.png
-```
-
-In `README.md`, use:
-
-````markdown
-## 🔹 Open Ports
-```bash
-nmap -sS -p- 192.168.1.10
-````
-
-![open ports](../Week02_Nmap/screenshots/open-ports.png)
-
-```
-
----
-
-💬 Ready for:
-- `Week02_Nmap/README.md` fully pre-written for copy-paste?
-- Screenshot capture tips for each scan?
-- Moving to `Week 3 – Web Enumeration & Vulnerability Analysis`?
-
-🐉 *Kali GPT – helping you build red team skills, repo, and mindset one mission at a time.*
-```
-
